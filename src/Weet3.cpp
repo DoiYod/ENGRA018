@@ -1,15 +1,15 @@
+/*
 #include <Arduino.h>
 // กำหนดพอร์ตที่ใช้สำหรับ LED
-int L1 = 23;
-int L2 = 19;
-int L3 = 18;
-int L4 = 5;
-int L5 = 17;
-int L6 = 16;
-int L7 = 4;
-int L8 = 0;
+int L1 = 23; // led1
+int L2 = 19; // led2
+int L3 = 18; // led3
+int L4 = 5; // led4
+int L5 = 17; // led5
+int L6 = 16; // led6
+int L7 = 4; // led7
+int L8 = 0; // led8
 
-// การตั้งค่าในฟังก์ชัน setup()
 void setup() {
   // ตั้งค่า LED ทุกตัวให้ทำงานในโหมด PWM
   pinMode(L1, OUTPUT);
@@ -45,13 +45,13 @@ void loop() {
     digitalWrite(L1, HIGH);
   }
   else if (potValue >= 501 && potValue <= 1000) {
-    // ถ้าค่า Potentiometer อยู่ในช่วง 501-1000 ให้ L2 และ L3 ติด
+    // ถ้าค่า Potentiometer อยู่ในช่วง 501-1000 ให้ L1 L2 L3 ติด
     digitalWrite(L1, HIGH);
     digitalWrite(L2, HIGH);
     digitalWrite(L3, HIGH);
   }
   else if (potValue >= 1001 && potValue <= 2000) {
-    // ถ้าค่า Potentiometer อยู่ในช่วง 1001-2000 ให้ L4 และ L5 ติด
+    // ถ้าค่า Potentiometer อยู่ในช่วง 1001-2000 ให้ L1 L2 L3 L4 L5 ติด
     digitalWrite(L1, HIGH);
     digitalWrite(L2, HIGH);
     digitalWrite(L3, HIGH);
@@ -59,7 +59,7 @@ void loop() {
     digitalWrite(L5, HIGH);
   }
   else if (potValue > 2000) {
-    // ถ้าค่า Potentiometer อยู่ในช่วงมากกว่า 2000 ให้ L6, L7, L8 ติด
+    // ถ้าค่า Potentiometer อยู่ในช่วงมากกว่า 2000 ให้ L1 L2 L3 L4 L5 L6 L7 L8 ติด
     digitalWrite(L1, HIGH);
     digitalWrite(L2, HIGH);
     digitalWrite(L3, HIGH);
@@ -73,3 +73,4 @@ void loop() {
   // หน่วงเวลาเพื่อให้การอ่านค่ามีความเสถียร
   delay(100);
 }
+*/
